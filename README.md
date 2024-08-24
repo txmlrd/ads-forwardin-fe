@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ADS Forwardin Front-End
 
-## Getting Started
+This project is a test case implementation for ADS Digital Partner. It includes a landing page, authentication system using NextAuth, and a dashboard with various features.
 
-First, run the development server:
+## Project Details
 
-```bash
+- **Name:** I Gusti Agung Ngurah Adhi Sanjaya
+- **Email:** gungadhisanjaya@gmail.com
+- **University:** Institut Teknologi Sepuluh Nopember
+- **Repository Link:** [GitHub Repository](https://github.com/txmlrd/ads-forwardin-fe)
+- **Live Demo:** [ads-forwardin-test-case.vercel.app](https://ads-forwardin-test-case.vercel.app/)
+
+## Credentials
+
+### Sign In
+- **Email:** user@example.com
+- **Password:** pass
+
+### Sign Up
+- **Email:** user@example.com
+- **Username:** user
+- **Phone Number:** 6212345678
+- **Password:** Password123!
+
+## Installation
+
+Follow these steps to set up the project locally:
+
+1. **Clone the Repository:**
+   ```
+   git clone https://github.com/txmlrd/ads-forwardin-fe.git
+   ```
+2.  **Navigate to the Project Directory:**
+ ```
+   cd ads-forwardin-fe
+```
+3. **Instal Depedency:**
+ ```
+   npm install
+```
+4. **Set Up Environment Variables: Create a .env.local file in the root directory and add the following environment variables:**
+ ```
+  NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=rahasia123
+
+```
+5. **Run App:**
+```
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Issues Encountered
+- **Initial Configuration Error:** There was an issue where the NextAuth path was incorrectly set, leading to authentication failures. This was resolved by updating the path to the correct configuration.
+- **Environment Variables:** Missing or incorrectly set environment variables can cause issues, particularly the `NEXTAUTH_SECRET` in production, which was addressed during the setup.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Conclusion
+This project demonstrates the integration of Next.js with NextAuth for a secure and responsive authentication system. The implementation covers key functionalities such as registration, login, and a user dashboard, all designed with a focus on user experience and security.
