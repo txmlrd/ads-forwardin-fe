@@ -16,14 +16,48 @@
   }
 }
 
+/* Debug 1: Red border */
+.debug {
+  border: 2px solid red;
+}
+
+/* Debug 2: Green border */
+.debug2 {
+  border: 2px solid green;
+}
+
+/* Debug 3: Blue border */
+.debug3 {
+  border: 2px solid blue;
+}
+
+/* Debug 4: Yellow border */
+.debug4 {
+  border: 2px solid yellow;
+}
+
+/* Debug 5: Purple border */
+.debug5 {
+  border: 2px solid purple;
+}
+.font-inter {
+  font-family: var(--font-inter), sans-serif;
+}
+
+.font-lexa {
+  font-family: var(--font-lexa), sans-serif;
+}
+
 body {
+  font-family: var(--font-inter), sans-serif;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-lexa), sans-serif;
 }
 
 @layer utilities {
