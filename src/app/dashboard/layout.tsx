@@ -21,7 +21,7 @@ import MoveToInboxIcon from "@mui/icons-material/MoveToInbox";
 import DarkModeToggle from "@/component/darkModeToggle";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import WidgetsIcon from '@mui/icons-material/Widgets';
+import WidgetsIcon from "@mui/icons-material/Widgets";
 import Tooltip from "@mui/material/Tooltip";
 
 const links = [
@@ -51,14 +51,10 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     }
   }, [session, router]);
 
-
-
- 
   const [activeLink, setActiveLink] = useState(pathname);
   const [showContactLinks, setShowContactLinks] = useState(false);
   const [showMessageLinks, setShowMessageLinks] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  
 
   useEffect(() => {
     setActiveLink(pathname);
@@ -82,11 +78,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     <main className="bg-white transition-all duration-500 ease-in-out dark:bg-[#121212] flex flex-row min-h-screen ">
       <DarkModeToggle />
       {/* Sidebar (Mobile Only) */}
-      <div
-        className={`fixed  top-0 left-0 h-screen bg-white dark:bg-[#121212] transition-all duration-300 ease-in-out ${
-          isSidebarOpen ? "translate-x-0 blur-0" : "-translate-x-full blur-md"
-        } w-72 flex flex-col p-5 z-50 md:hidden`}
-      >
+      <div className={`fixed  top-0 left-0 h-screen bg-white dark:bg-[#121212] transition-all duration-300 ease-in-out ${isSidebarOpen ? "translate-x-0 blur-0" : "-translate-x-full blur-md"} w-72 flex flex-col p-5 z-50 md:hidden`}>
         <a href="/" className="my-10 flex justify-center items-center">
           <img src="../logoforwardinfullbiru.svg" alt="logo" />
         </a>
@@ -157,7 +149,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                           <Link href="/dashboard/messages/inbox">
                             <div
                               className={`flex flex-row items-center px-6 py-3 mb-2 hover:bg-biru dark:hover:bg-biru hover:text-white transition-all duration-500 ease-in-out rounded-xl ${
-                                activeLink === "/dashboard/messages/inbox" ? "bg-biru text-white" : "bg-white dark:bg-transparent dark:text-white text-black
+                                activeLink === "/dashboard/messages/inbox" ? "bg-biru text-white" : "bg-white dark:bg-transparent dark:text-white text-black"
                               }`}
                             >
                               <InboxIcon className="mr-2" />
@@ -310,8 +302,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                           <Link href="/dashboard/messages/inbox">
                             <div
                               className={`flex flex-row items-center px-6 py-3 mb-2 hover:bg-biru dark:hover:bg-biru hover:text-white transition-all duration-500 ease-in-out rounded-xl ${
-                                activeLink === "/dashboard/messages/inbox" ? "bg-biru text-white" : "bg-white dark:bg-transparent dark:text-white text-black 
-}`}>
+                                activeLink === "/dashboard/messages/inbox" ? "bg-biru text-white" : "bg-white dark:bg-transparent dark:text-white text-black "
+                              }`}
+                            >
                               <InboxIcon className="mr-2" />
                               Messenger
                             </div>
@@ -391,12 +384,12 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         </div>
       </div>
       <Tooltip title={isSidebarOpen ? "Open menu" : "Close Menu"}>
-      <div
-               onClick={toggleSidebar}
-                className={`fixed bottom-5 right-5 md:hidden p-4 bg-biru text-whiteshadow-lg transition-all duration-300 ease-in-out transform ${isSidebarOpen ? "rotate-180" : "rotate-0"} hover:bg-gray-700 focus:outline-none rounded-full`}
->
-       <WidgetsIcon/>
-      </div>
+        <div
+          onClick={toggleSidebar}
+          className={`fixed bottom-5 right-5 md:hidden p-4 bg-biru text-whiteshadow-lg transition-all duration-300 ease-in-out transform ${isSidebarOpen ? "rotate-180" : "rotate-0"} hover:bg-gray-700 focus:outline-none rounded-full`}
+        >
+          <WidgetsIcon />
+        </div>
       </Tooltip>
 
       <div className="w-full h-full overflow-hidden rounded-xl md:m-5 ">{children}</div>
