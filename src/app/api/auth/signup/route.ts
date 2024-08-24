@@ -12,8 +12,8 @@ export async function POST(request: Request) {
   };
 
   if (email === dummyData.email && username === dummyData.username && phoneNumber === dummyData.phoneNumber && password === dummyData.password) {
-    return NextResponse.json({ message: "Success! :)" }, { status: 200 });
+    return NextResponse.json({ message: "Success to creat an account!" }, { status: 200 });
   } else {
-    return NextResponse.json({ message: "Failed :(" }, { status: 400 });
+    return NextResponse.json({ message: "Failed to create account." }, { status: 400 });
   }
 }

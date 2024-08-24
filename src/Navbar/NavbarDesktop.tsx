@@ -14,12 +14,12 @@ const Navbar = () => {
           Features
           <ArrowDropDown />
         </button>
-        <li>Pricing</li>
-        <li>Demo</li>
-        <li>Blog</li>
+        <li className="hover:text-biru transition-all duration-300 ease-in-out cursor-pointer">Pricing</li>
+        <li className="hover:text-biru transition-all duration-300 ease-in-out cursor-pointer">Demo</li>
+        <li className="hover:text-biru transition-all duration-300 ease-in-out cursor-pointer">Blog</li>
       </ul>
 
-      <a href="/signin" className="bg-biru text-white px-8 py-2 rounded-md font-inter font-light text-[14px]">
+      <a href="/signin" className="bg-biru hover:bg-blue-700 transition-all duration-500 ease-in-out cursor-pointer text-white px-8 py-2 rounded-md font-inter font-normal text-[14px]">
         Sign In
       </a>
     </nav>

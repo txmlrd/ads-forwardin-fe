@@ -106,6 +106,7 @@ function SignUp() {
           <div className="flex w-full flex-col justify-center items-center md:w-[466px] md:h-fit md:bg-white text-black rounded-xl md:shadow-lg px-7 md:p-5">
             <h1 className="font-lexa text-[24px] font-bold">Welcome to Fowardin</h1>
             <p className="font-inter text-[14px] font-semibold text-center">Revolutionize your communication journey with Fowardin today</p>
+            {message && <p className="text-red-500 text-center p-3 rounded-lg text-sm my-4 font-bold bg-white shadow-lg">{message}</p>}
             <form className="flex flex-col w-full space-y-3 mt-6" onSubmit={handleSubmit}>
               <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} className="text-[14px] py-3 px-4 border-2 rounded-md" required />
               <input type="text" name="username" placeholder="Username" value={formData.username} onChange={handleChange} className="text-[14px] py-3 px-4 border-2 rounded-md" required />
@@ -143,7 +144,7 @@ function SignUp() {
               </div>
 
               <input type="password" name="password" placeholder="Password" value={password} onChange={(e) => validatePassword(e.target.value)} className="text-[14px] py-3 px-4 border-2 rounded-md" required />
-              <button className="w-full text-[14px] py-3 px-4 mt-7 bg-biru text-white rounded-md">Sign Up</button>
+              <button className="w-full text-[14px] py-3 px-4 mt-7 bg-biru hover:to-blue-800 transition-all duration-500 ease-in-out cursor-pointer text-white rounded-md">Sign Up</button>
             </form>
             <div
               className={`w-full p-5  bg-[#F3F5F8] rounded-lg text-[14px] font-inter transition-all duration-500 ease-in-out overflow-hidden ${hasTyped ? "my-5 opacity-100 max-h-screen" : "opacity-0 max-h-0"}`}
@@ -181,7 +182,6 @@ function SignUp() {
                 </div>
               </div>
             </div>
-            {message && <p className="text-white p-3 rounded-lg text-sm my-4 bg-biru shadow-lg">{message}</p>}
           </div>
         </div>
       </div>

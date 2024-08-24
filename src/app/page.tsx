@@ -67,12 +67,12 @@ export default function Home() {
               Selamat datang di Fowardin! Pengelolaan pesan Anda menjadi lebih mudah dengan Admin Tools kami. Tingkatkan komunikasi Anda dan pelanggan dengan fitur pesan otomatis. Menyimpan kontak menjadi lebih praktis dengan fitur
               sinkronasi Google Contact. Dapatkan kendali penuh pesan dengan manajemen konten yang praktis.
             </p>
-            <div className="flex flex-row rounded-lg">
-              <button className="text-[14px] bg-black text-white w-fit py-3 px-10 rounded-tl-md rounded-bl-md ">Daftar Sekarang</button>
-              <a href="" className="py-3 px-3 bg-black text-white rounded-tr-md rounded-br-md border-l border-white">
+            <a href="/signup" className="flex flex-row rounded-lg group">
+              <button className="text-[14px] group-hover:bg-gray-600 transition-all duration-500 ease-in-out bg-black text-white w-fit py-3 px-10 rounded-tl-md rounded-bl-md ">Daftar Sekarang</button>
+              <div className="py-3 px-3 bg-black group-hover:bg-gray-600 transition-all duration-500 ease-in-out text-white rounded-tr-md rounded-br-md border-l border-white">
                 <EastIcon />
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
           <AdminToolsDesktop />
         </div>
@@ -83,7 +83,7 @@ export default function Home() {
       {/* 2nd start */}
       <section id="section2" className="px-8">
         <div className="flex flex-col md:flex-row min-h-screen items-center justify-center max-w-[1037px] mx-auto">
-          <div>
+          <div className="hover:scale-105 transition-all duration-500 ease-in-out">
             <img src="images/landingpage/broadcasttools.png" alt="broadcasttools" />
           </div>
           <div className="max-w-[367px] space-y-5">
@@ -99,7 +99,7 @@ export default function Home() {
       {/* 3rd start */}
       <section id="section3" className=" bg-white">
         <div className="flex flex-col md:flex-row min-h-screen items-center justify-center max-w-[1037px] mx-auto px-8 w-full">
-          <div className="block md:hidden">
+          <div className="block md:hidden hover:scale-105 transition-all duration-500 ease-in-out">
             <img src="images/landingpage/campaigntools.png" alt="campaigntools" />
           </div>
           <div className="max-w-[367px] space-y-5">
@@ -109,7 +109,7 @@ export default function Home() {
               iklan memiliki dampak yang lebih besar.
             </p>
           </div>
-          <div className="hidden md:block">
+          <div className="hidden md:block hover:scale-105 transition-all duration-500 ease-in-out">
             <img src="images/landingpage/campaigntools.png" alt="campaigntools" />
           </div>
         </div>
@@ -119,7 +119,7 @@ export default function Home() {
       {/* 4th start */}
       <section id="section4" className="px-8">
         <div className="flex flex-col md:flex-row min-h-screen items-center justify-center max-w-[1037px] mx-auto">
-          <div>
+          <div className="hover:scale-105 transition-all duration-500 ease-in-out">
             <img src="images/landingpage/autoreply.png" alt="autoreply" />
           </div>
           <div className="max-w-[367px] space-y-5">
@@ -139,7 +139,7 @@ export default function Home() {
           <div className="flex flex-col space-y-[58px]">
             <h1 className="font-lexa text-biru text-[34px] text-center font-bold">&ldquo;One Step Closer to More Effective and Connected Communication!&rdquo;</h1>
             <div className="flex flex-col md:flex-row justify-center items-center">
-              <div className="w-[253px] h-[243px]">
+              <div className="w-[253px] h-[243px] hover:scale-125 transition-all duration-500 ease-in-out hover:-rotate-2">
                 <img src="images/landingpage/statisticmsg.png" alt="statisticmsg" />
               </div>
 
@@ -148,19 +148,23 @@ export default function Home() {
                 <div className="md:flex hidden flex-row space-x-3 mb-4">
                   <button
                     onClick={() => setSection("bisnis")}
-                    className={`border border-biru text-[14px] rounded-lg px-6 py-2 transition-all duration-300 ease-in-out ${activeSection === "bisnis" ? "bg-biru text-white" : "bg-transparent text-biru"}`}
+                    className={`border border-biru text-[14px] rounded-lg px-6 py-2 transition-all duration-300 ease-in-out ${activeSection === "bisnis" ? "bg-biru text-white" : "bg-transparent text-biru hover:bg-biru hover:text-white"}`}
                   >
                     Bisnis dan Pemasaran
                   </button>
                   <button
                     onClick={() => setSection("komersial")}
-                    className={`border border-biru text-[14px] rounded-lg px-6 py-2 transition-all duration-300 ease-in-out ${activeSection === "komersial" ? "bg-biru text-white" : "bg-transparent text-biru"}`}
+                    className={`border border-biru text-[14px] rounded-lg px-6 py-2 transition-all duration-300 ease-in-out ${
+                      activeSection === "komersial" ? "bg-biru text-white" : "bg-transparent text-biru hover:bg-biru hover:text-white"
+                    }`}
                   >
                     Komersial dan Penjualan
                   </button>
                   <button
                     onClick={() => setSection("organisasi")}
-                    className={`border border-biru text-[14px] rounded-lg px-6 py-2 transition-all duration-300 ease-in-out ${activeSection === "organisasi" ? "bg-biru text-white" : "bg-transparent text-biru"}`}
+                    className={`border border-biru text-[14px] rounded-lg px-6 py-2 transition-all duration-300 ease-in-out ${
+                      activeSection === "organisasi" ? "bg-biru text-white" : "bg-transparent text-biru hover:bg-biru hover:text-white"
+                    }`}
                   >
                     Organisasi Sosial
                   </button>
@@ -225,10 +229,10 @@ export default function Home() {
           <h1 className="font-lexa md:text-[34px] text-[20px] text-center font-bold">Our Pricing</h1>
           <h1 className="font-lexa text-[34px] md:hidden block text-center font-bold">Subscription</h1>
           <div className="text-[14px] flex flex-row space-x-[9px] shadow-xl p-2 rounded-full">
-            <button onClick={() => setActivePricing("monthly")} className={`transition-all px-6 py-3 rounded-full ${activePricing === "monthly" ? "bg-biru text-white" : "bg-transparent text-black"}`}>
+            <button onClick={() => setActivePricing("monthly")} className={`transition-all px-6 py-3 rounded-full ${activePricing === "monthly" ? "bg-biru text-white" : "bg-transparent text-black hover:bg-biru hover:text-white"}`}>
               Monthly
             </button>
-            <button onClick={() => setActivePricing("yearly")} className={`transition-all px-6 py-3 rounded-full ${activePricing === "yearly" ? "bg-biru text-white" : "bg-transparent text-black"}`}>
+            <button onClick={() => setActivePricing("yearly")} className={`transition-all px-6 py-3 rounded-full ${activePricing === "yearly" ? "bg-biru text-white" : "bg-transparent text-black hover:bg-biru hover:text-white"}`}>
               Yearly
             </button>
           </div>

@@ -42,7 +42,7 @@ function SignIn() {
 
       setError(errorMessage);
     } else if (result?.ok) {
-      let successMessage = "Login successful!   Redirecting...";
+      let successMessage = "Login successful!";
       setSuccess(successMessage);
       router.push("/dashboard/main");
     }
@@ -70,7 +70,7 @@ function SignIn() {
             <form onSubmit={handleSignIn} className="flex flex-col w-full space-y-3 mt-6">
               <input name="email" type="email" placeholder="Username / Email" className="text-[14px] py-3 px-4 border-2 rounded-md" required />
               <input name="password" type="password" placeholder="Password" className="text-[14px] py-3 px-4 border-2 rounded-md" required />
-              <button type="submit" className={`w-full text-[14px] py-3 px-4 mt-7 ${loading ? "bg-gray-400" : "bg-biru"} text-white rounded-md`} disabled={loading}>
+              <button type="submit" className={`w-full text-[14px] py-3 px-4 mt-7 transition-all duration-500 ease-in-out cursor-pointer ${loading ? "bg-gray-400" : "bg-biru hover:bg-blue-700 "} text-white rounded-md`} disabled={loading}>
                 {loading ? "Signing In..." : "Sign In"}
               </button>
             </form>
