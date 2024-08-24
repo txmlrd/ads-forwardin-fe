@@ -1,6 +1,6 @@
-# ADS Forwardin Front-End
+# ADS Forwardin Front-End Intern Test Case
 
-This project is a test case implementation for ADS Digital Partner. It includes a landing page, authentication system using NextAuth, and a dashboard with various features.
+This project is a test case implementation for ADS Digital Partner Intern FE. It includes a landing page, authentication system using NextAuth, and a dashboard with various features.
 
 ## Project Details
 
